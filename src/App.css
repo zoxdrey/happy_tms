@@ -36,3 +36,12 @@ p {
   padding: 0;
   margin: 0;
 }
+
+td {
+  cursor: pointer;
+}
+
+.border-mixin {
+  box-shadow: 0 0 10px grey;
+  margin: 8px;
+}
