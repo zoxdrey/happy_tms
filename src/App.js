@@ -20,16 +20,6 @@ class App extends React.Component {
       editState: false}
   }
  
-  renderTableData() {
-    return this.state.testCaseSteps.map((testCaseSteps) => {
-      const { id, step, expectedResult} = testCaseSteps //destructuring
-
-      return (
-         <tr key={id}>
-            <td><QuillComponent value={step}></QuillComponent></td>
-            <td><QuillComponent value={expectedResult}></QuillComponent></td>
-         </tr>)})
-  }
 
   addStep() {
     let steps = this.state.testCaseSteps;
@@ -41,8 +31,8 @@ class App extends React.Component {
     return (
     <div className="App">
       <Header/>
-    <div class="container-fluid">
-      <div class="row">
+    <div className="container-fluid">
+      <div className="row">
         <Sidebar/>
         <Main/>  
       </div>

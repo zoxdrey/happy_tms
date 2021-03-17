@@ -20,7 +20,16 @@ router.post('/register', async (req, res) => {
 })
 
 router.post('/login', async (req, res) => {
-
+    return res.status(200).json(
+        {
+            testCaseId: "1",
+            testCaseName: "TEST",
+            testCaseSteps: [
+              {id:1, step: "step", expectedResult: "expectedResult"},
+              {id:2, step: "step", expectedResult: "expectedResult"},
+            ]
+        }
+    );
 })
 
 module.exports = router;

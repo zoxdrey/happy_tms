@@ -45,3 +45,7 @@ td {
   box-shadow: 0 0 10px grey;
   margin: 8px;
 }
+
+.bi-pencil {
+  cursor: pointer;
+}
