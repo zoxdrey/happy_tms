@@ -4,15 +4,16 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-
-app.use(cors());
-app.use('/api/auth', require('./routes/auth.routes'))
+app.use(express.json());
+app.use('/api/auth', require('./routes/auth.routes'));
+app.use('/api', require('./routes/step.routes'));
 const PORT = config.get('port') || 5000;
 const MONGOURI = config.get('mongoUri') || "mongodb://localhost:27017/";
+const uri = "mongodb+srv://root:root@cluster0.de1p8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"; //TODO разобраться почему не рабоатет с адресом из конфига
 
 async function start() {
     try {
-      await mongoose.connect(MONGOURI, {
+      await mongoose.connect(uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true
