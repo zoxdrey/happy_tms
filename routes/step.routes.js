@@ -4,9 +4,10 @@ const router = Router();
 
 router.post('/create-step', async (req, res) => {
     try {
-        const {stepAction, stepExpectedResult} = req.body;
+        const {stepAction, stepExpectedResult, testCase} = req.body;
 
         Step.create({
+            testCase: testCase,
             stepAction: stepAction,
             stepExpectedResult: stepExpectedResult
         }, function() {

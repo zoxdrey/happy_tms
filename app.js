@@ -7,6 +7,7 @@ const app = express();
 app.use(express.json());
 app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api', require('./routes/step.routes'));
+app.use('/api', require('./routes/testCase.routes'));
 const PORT = config.get('port') || 5000;
 const MONGOURI = config.get('mongoUri') || "mongodb://localhost:27017/";
 const uri = "mongodb+srv://root:root@cluster0.de1p8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"; //TODO разобраться почему не рабоатет с адресом из конфига
