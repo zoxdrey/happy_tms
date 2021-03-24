@@ -1,46 +1,46 @@
 import { useHistory } from "react-router-dom";
+import Button from "../components/Button";
 
 export default function Auth() {
   const fullYear = new Date().getFullYear();
   let history = useHistory();
 
-  return (
-    <div class="form-signin">
-      <form>
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  const login = () => {
+    console.log("enter");
+    history.push("/");
+  };
 
-        <div class="form-floating">
+  return (
+    <div className="form-signin">
+      <form>
+        <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+
+        <div className="form-floating">
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="floatingInput"
             placeholder="name@example.com"
           />
-          <label for="floatingInput">Email address</label>
+          <label htmlFor="floatingInput">Email address</label>
         </div>
-        <div class="form-floating">
+        <div className="form-floating">
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="floatingPassword"
             placeholder="Password"
           />
-          <label for="floatingPassword">Password</label>
+          <label htmlFor="floatingPassword">Password</label>
         </div>
 
-        <div class="checkbox mb-3">
+        <div className="checkbox mb-3">
           <label>
             <input type="checkbox" value="remember-me" /> Remember me
           </label>
         </div>
-        <button
-          class="w-100 btn btn-lg btn-primary"
-          type="submit"
-          onClick={() => history.push("/")}
-        >
-          Sign in
-        </button>
-        <p class="mt-5 mb-3 text-muted">&copy; {fullYear}</p>
+        <Button loginEvent={login} name="Sing in" />
+        <p className="mt-5 mb-3 text-muted">&copy; {fullYear}</p>
       </form>
     </div>
   );
