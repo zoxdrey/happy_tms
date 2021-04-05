@@ -1,9 +1,17 @@
-const { Schema, model, Types } = require("mongoose");
+const pool = require("./db");
+class User {
+  constructor(user) {
+    (this.name = user.name), (this.age = user.age);
+  }
 
-const schema = new Schema({
-  email: { type: String, required: true, unique: true },
-  password: { type: String, require: true },
-  links: [{ type: Types.ObjectId, ref: "Link" }],
-});
+  createUser(newUser, result) {}
 
-module.exports = model("User", schema);
+  getAllUsers() {
+    pool.query("SELECT * FROM users", function (err, results) {
+      if (err) console.log(err);
+      return results;
+    });
+  }
+}
+
+module.exports = User;

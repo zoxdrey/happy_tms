@@ -17,7 +17,9 @@ router.post("/register", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  return res.status(200).json();
+  const user = new User("Gragg", "78");
+  const data = user.getAllUsers();
+  return res.status(200);
 });
 
 module.exports = router;

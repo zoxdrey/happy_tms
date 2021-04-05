@@ -1,4 +1,8 @@
 {
-    "port": 5001,
-    "mongoUri": "mongodb+srv://root:root@cluster0.de1p8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "port": 5505,
+    "connectionLimit": 5,
+    "host": "localhost",
+    "user": "root",
+    "database": "happy_tms",
+    "password": "root"
 }
