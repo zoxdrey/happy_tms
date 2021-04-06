@@ -7,10 +7,7 @@ class User {
   createUser(newUser, result) {}
 
   getAllUsers() {
-    pool.query("SELECT * FROM users", function (err, results) {
-      if (err) console.log(err);
-      return results;
-    });
+    return pool.execute("SELECT * FROM users");
   }
 }
 
