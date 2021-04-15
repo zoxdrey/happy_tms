@@ -69,128 +69,148 @@ export default function Sidebar() {
           </ul>
         </div>
 
-        <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Saved reports</span>
+        <div class="p-3 bg-white">
           <a
-            className="link-secondary"
-            href="/some/valid/uri"
-            aria-label="Add a new report"
+            href="/"
+            class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom"
           >
-            <span data-feather="plus-circle"></span>
+            <svg class="bi me-2" width="30" height="24"></svg>
+            <span class="fs-5 fw-semibold">Collapsible</span>
           </a>
-        </h6>
-        <div className="menu-border">
-          <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
-            <nav className="small" id="toc">
-              <ul className="list-unstyled">
-                <li className="my-2">
-                  <button
-                    className="btn d-inline-flex align-items-center collapsed"
-                    data-bs-toggle="collapse"
-                    aria-expanded="true"
-                    data-bs-target="#contents-collapse"
-                    aria-controls="contents-collapse"
-                  >
-                    Contents
-                  </button>
-                  <ul
-                    className="list-unstyled ps-3 collapse"
-                    id="contents-collapse"
-                  >
-                    <li>Typography</li>
-                    <li>
-                      <a
-                        className="d-inline-flex align-items-center rounded"
-                        href="#images"
-                      >
-                        Images
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="d-inline-flex align-items-center rounded"
-                        href="#tables"
-                      >
-                        Tables
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="d-inline-flex align-items-center rounded"
-                        href="#figures"
-                      >
-                        Figures
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="my-2">
-                  <button
-                    className="btn d-inline-flex align-items-center collapsed"
-                    data-bs-toggle="collapse"
-                    aria-expanded="true"
-                    data-bs-target="#forms-collapse"
-                    aria-controls="forms-collapse"
-                  >
-                    Forms
-                  </button>
-                  <ul
-                    className="list-unstyled ps-3 collapse"
-                    id="forms-collapse"
-                  >
-                    <li>
-                      <a
-                        className="d-inline-flex align-items-center rounded"
-                        href="#overview"
-                      >
-                        Overview
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="d-inline-flex align-items-center rounded"
-                        href="#disabled-forms"
-                      >
-                        Disabled forms
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="d-inline-flex align-items-center rounded"
-                        href="#sizing"
-                      >
-                        Sizing
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="d-inline-flex align-items-center rounded"
-                        href="#input-group"
-                      >
-                        Input group
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="d-inline-flex align-items-center rounded"
-                        href="#floating-labels"
-                      >
-                        Floating labels
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="d-inline-flex align-items-center rounded"
-                        href="#validation"
-                      >
-                        Validation
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </aside>
+          <ul class="list-unstyled ps-0">
+            <li class="mb-1">
+              <button
+                class="btn btn-toggle align-items-center rounded collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#home-collapse"
+                aria-expanded="true"
+              >
+                Home
+              </button>
+              <div class="collapse show" id="home-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Overview
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Updates
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Reports
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button
+                class="btn btn-toggle align-items-center rounded collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#dashboard-collapse"
+                aria-expanded="false"
+              >
+                Dashboard
+              </button>
+              <div class="collapse" id="dashboard-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Overview
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Weekly
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Monthly
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Annually
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button
+                class="btn btn-toggle align-items-center rounded collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#orders-collapse"
+                aria-expanded="false"
+              >
+                Orders
+              </button>
+              <div class="collapse" id="orders-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      New
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Processed
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Shipped
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Returned
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="border-top my-3"></li>
+            <li class="mb-1">
+              <button
+                class="btn btn-toggle align-items-center rounded collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#account-collapse"
+                aria-expanded="false"
+              >
+                Account
+              </button>
+              <div class="collapse" id="account-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      New...
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" class="link-dark rounded">
+                      Sign out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
