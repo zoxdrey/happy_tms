@@ -1,13 +1,18 @@
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../components/Button";
+import axiosService from "../services/auth.service";
 
 export default function Auth() {
   const fullYear = new Date().getFullYear();
   let history = useHistory();
 
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const login = () => {
     console.log("enter");
-    history.push("/");
+    axiosService.login(username, password);
+    //history.push("/");
   };
 
   return (
@@ -21,6 +26,9 @@ export default function Auth() {
             className="form-control"
             id="floatingInput"
             placeholder="name@example.com"
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
           />
           <label htmlFor="floatingInput">Email address</label>
         </div>
@@ -30,6 +38,9 @@ export default function Auth() {
             className="form-control"
             id="floatingPassword"
             placeholder="Password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
           <label htmlFor="floatingPassword">Password</label>
         </div>
