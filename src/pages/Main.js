@@ -36,7 +36,7 @@ export default class Main extends React.Component {
   render() {
     console.log(this.state.testCaseSteps);
     return (
-      <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4 border-mixin">
+      <main className="border-mixin">
         <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 className="h3">Test Case</h1>
           <div className="btn-toolbar mb-2 mb-md-0">

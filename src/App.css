@@ -1,6 +1,5 @@
 .page-content {
   display: flex;
-  justify-content: center;
   padding-top: 10px;
 }
 
@@ -44,6 +43,7 @@ td {
 .border-mixin {
   box-shadow: 0 0 10px grey;
   margin: 8px;
+  padding: 10px;
 }
 
 .bi-pencil {
@@ -138,4 +138,13 @@ body > * {
 }
 .lh-tight {
   line-height: 1.25;
+}
+
+#root {
+  width: 100%;
+}
+
+.App {
+  max-width: 1440px;
+  margin: 0 auto;
 }

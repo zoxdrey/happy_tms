@@ -37,13 +37,9 @@ class App extends React.Component {
           </Route>
           <Route path="/">
             <div className="App">
-              <Header />
-              <div className="container-fluid">
-                <div className="row">
-                  <Sidebar />
-                  <Main />
-                </div>
-              </div>
+              {/* <Header /> */}
+              {/* <Sidebar /> */}
+              <Main />
             </div>
           </Route>
         </Switch>
